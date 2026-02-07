@@ -23,13 +23,16 @@ jobs:
       - name: Install Dependencies
         run: npm install resume-cli jsonresume-theme-elegant
 
-      - name: Generate HTML (Elegant Theme)
-        run: npx resume export index.html --theme jsonresume-theme-elegant --resume resume.json
+      - name: Generate HTML
+        run: |
+          mkdir dist
+          npx resume export dist/index.html --theme jsonresume-theme-elegant --resume resume.json
+          cp resume.json dist/resume.json
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: .
-          keep_files: true
+          publish_dir: ./dist
           force_orphan: true
+          full_commit_message: "Deploy resume [skip ci]"
