@@ -17,11 +17,11 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Resume CLI
-        run: npm install -g resume-cli jsonresume-theme-stackoverflow jsonresume-theme-elegant
+      - name: Install Dependencies
+        run: npm install resume-cli jsonresume-theme-elegant
 
-      - name: Generate HTML (StackOverflow Theme)
-        run: resume export index.html --theme stackoverflow --resume resume.json
+      - name: Generate HTML (Elegant Theme)
+        run: npx resume export index.html --theme jsonresume-theme-elegant --resume resume.json
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
