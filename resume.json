@@ -24,7 +24,9 @@
       "studyType": "本科",
       "startDate": "2010",
       "endDate": "2014",
-      "score": "数学建模大赛国家一等奖"
+      "courses": [
+        "数学建模大赛国家一等奖"
+      ]
     }
   ],
   "skills": [
