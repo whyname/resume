@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>周烽坪 · 云成本(FinOps)×AI 工程师</title>
+<style>
+  :root{
+    --ink:#1c2733;
+    --muted:#5a6b7b;
+    --accent:#0f6ecd;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html,body{
+    font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",-apple-system,sans-serif;
+    color:var(--ink);
+    background:#f3f5f7;
+  }
+  .sheet{
+    width:210mm;
+    min-height:297mm;
+    margin:0 auto;
+    background:#fff;
+    padding:10mm 11mm 9mm;
+  }
+  @media print{
+    @page{ size:A4; margin:0; }
+    html,body{ background:#fff; }
+    .sheet{ width:auto; min-height:auto; margin:0; padding:9mm 11mm 8mm; box-shadow:none; }
+  }
+
+  /* header */
+  .head{ display:flex; align-items:flex-end; justify-content:space-between; border-bottom:2.5px solid var(--accent); padding-bottom:3mm; }
+  .head .name{ font-size:25pt; font-weight:700; letter-spacing:1.5px; }
+  .head .role{ font-size:12pt; color:var(--accent); font-weight:600; margin-top:1.2mm;}
+  .contact{ text-align:right; font-size:9pt; color:var(--muted); line-height:1.75; }
+
+  h2{
+    font-size:11.5pt; color:var(--accent); font-weight:700;
+    margin:4.2mm 0 2mm; letter-spacing:.5px;
+    border-left:3.5px solid var(--accent); padding-left:2.2mm;
+  }
+  p.summary{ font-size:9.3pt; line-height:1.7; color:var(--ink); text-align:justify; }
+
+  /* skills */
+  table.sk{ width:100%; border-collapse:collapse; font-size:9pt; line-height:1.55;}
+  table.sk td{ padding:0.8mm 0; vertical-align:top;}
+  table.sk td.k{ width:16mm; font-weight:600; color:var(--muted); white-space:nowrap;}
+
+  /* jobs */
+  .job{ margin-bottom:3mm; }
+  .job .jhead{ display:flex; justify-content:space-between; align-items:baseline; }
+  .job .jname{ font-weight:700; font-size:10.5pt;}
+  .job .jpos{ color:var(--accent); font-weight:600; font-size:9.5pt; margin-left:2mm;}
+  .job .jdate{ font-size:8.8pt; color:var(--muted); white-space:nowrap;}
+  .job .jscope{ font-size:8.4pt; color:var(--muted); line-height:1.55; margin:1mm 0 1mm; text-align:justify;}
+  ul{ list-style:none;}
+  ul li{ font-size:9.2pt; line-height:1.54; padding-left:3.8mm; position:relative; text-align:justify; margin-bottom:1mm;}
+  ul li::before{ content:"▪"; position:absolute; left:0; top:0; color:var(--accent); font-size:7.5pt;}
+
+  .edu{ font-size:9.4pt; line-height:1.7;}
+  .edu .sep{ color:var(--muted); margin:0 2mm;}
+  .tag{ color:var(--muted);}
+</style>
+</head>
+<body>
+  <div class="sheet">
+
+    <!-- header -->
+    <div class="head">
+      <div>
+        <div class="name">周烽坪</div>
+        <div class="role">云成本(FinOps) × AI 工程师</div>
+      </div>
+      <div class="contact">
+        杭州 · zhoufengping0114@gmail.com · 15695716603
+      </div>
+    </div>
+
+    <!-- summary -->
+    <h2>个人总结</h2>
+    <p class="summary">10 年+ 基础设施与云成本经验，6 年深耕混合云成本治理(FinOps)，近 2 年主导把成本领域的隐性知识封装为 LLM 智能体。长期搭建并维护公司多云成本数据与治理体系：覆盖 AWS / GCP / Azure / 阿里云 / 百度云 / 华为云 / Oracle 及私有云，服务上百业务项目，年成本规模数千万至亿元级。核心能力是把"经验式成本判断"沉淀为可持续运行的体系与算法——分摊与预购决策体系、跨云账单口径统一、FinOps 智能体与可靠性评测，方法可复用、结果不依赖特定场景。</p>
+
+    <!-- skills -->
+    <h2>核心技能</h2>
+    <table class="sk">
+      <tr><td class="k">成本治理</td><td>多云账单采集与清洗 · 成本分摊/成本透传 · RI/SP/CUD 预购分析与算法 · 对象存储分层与冗余治理 · RightSize 与异常检测 · 云厂商合同/折扣对接</td></tr>
+      <tr><td class="k">数据工程</td><td>Hive / Spark / Trino · TiDB / MySQL · 离线任务编排 · DataHub 元数据 · Superset · Python</td></tr>
+      <tr><td class="k">云平台</td><td>AWS / GCP / Azure / 阿里云 / 百度云 / 华为云 / Oracle / 私有云 · Pulumi (IaC) · 跨云网络 (S2S VPN/专线) · 合规迁移</td></tr>
+      <tr><td class="k">AI / LLM</td><td>LLM Agent (RAG/工具调用) · MCP · langfuse 评测 · 提示词动态治理 · LLM-wiki · 本地小模型落地</td></tr>
+    </table>
+
+    <!-- work -->
+    <h2>工作经历</h2>
+
+    <div class="job">
+      <div class="jhead">
+        <span><span class="jname">网易（NetEase）· Skyline 云成本平台</span><span class="jpos">成本数据 / FinOps×AI 工程师</span></span>
+        <span class="jdate">2020.05 – 至今</span>
+      </div>
+      <p class="jscope">覆盖 6+ 家公有云及私有云的账单/成本数据，服务上百业务项目，年成本规模数千万至亿元级；以个人(IC)角色从 0 设计并维护核心分摊算法、成本数据底座与 FinOps AI 智能体。</p>
+      <ul>
+        <li><b>成本空间挖掘：</b>在云厂商标准计费模型之外识别成本套利空间（合同折扣条款 × 实例代际差异），自研双层分摊算法并主导 GCP FCUD 模式迁移的采集/折扣校验/重分摊全链路适配（3 年对应千万级预算影响）。</li>
+        <li><b>预购决策体系：</b>把经验式预购升级为数据化决策——覆盖率/使用率/浪费多维指标 + 监控告警闭环 + 自动续购分析月报，将上百项目分散决策收敛为统一口径，稳定覆盖率长期维持 70%–80%。</li>
+        <li><b>存储成本治理：</b>跨云对象存储"分层/冗余"策略工具链（桶级访问频次与生命周期建模、含不可逆转换风险评估）；并行落地 RightSize 机型扫描、BigQuery 超阈值扫描与 Cloud-to-IDC 迁移治理看板（累计年化降本数十万元）。</li>
+        <li><b>成本数据基座：</b>将异构云账单收敛为单一可信账本（统一折扣/单位/区域口径）；共建阿里云摊销账单产品线；阿里云价格体系重构（合同细分折扣精细匹配）；多云实例小时级用量整合；成本分析平台 Superset 2.0→5.0 升级（跨源联合查询 30s→10s）。</li>
+        <li><b>FinOps×AI 智能体：</b>主导搭建内部首个成本域可信 Agent——RAG + DataHub 元数据/MCP 工具接入、多租户权限与成本规则对齐、基于 langfuse 的评测治理；探索 LLM-wiki 问答可靠性优于纯 RAG。</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="jhead">
+        <span><span class="jname">七炅科技</span><span class="jpos">运维开发工程师 (DevOps)</span></span>
+        <span class="jdate">2017.09 – 2019.05</span>
+      </div>
+      <ul>
+        <li>管理 AWS / 阿里云 / 华为云 / OpenStack 混合云集群，支撑车联网大数据业务；开发 Python 爬虫与 ETL 清洗流水线；搭建 GitLab/Jenkins/Docker CI/CD 闭环；部署 Zabbix 监控体系。</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="jhead">
+        <span><span class="jname">多益网络</span><span class="jpos">运维开发工程师</span></span>
+        <span class="jdate">2014.07 – 2017.08</span>
+      </div>
+      <ul>
+        <li>基于 Django + SaltStack 开发游戏客户端打包发布系统（内网→CDN 一键发布）；开发门禁权限 / WiFi 认证 / Wiki 等内部系统；Cisco 网络维护与远程开机方案。</li>
+      </ul>
+    </div>
+
+    <!-- education -->
+    <h2>教育经历</h2>
+    <p class="edu">中国地质大学（武汉）· 通信工程 · 本科<span class="sep">|</span>2010 – 2014<span class="sep">|</span><span class="tag">数学建模大赛国家一等奖</span></p>
+
+  </div>
+</body>
+</html>
