@@ -28,6 +28,8 @@ jobs:
           mkdir dist
           npx resume export dist/index.html --theme jsonresume-theme-elegant --resume resume.json
           cp resume.json dist/resume.json
+          cp 周烽坪-简历-单页.html dist/周烽坪-简历-单页.html
+          cp 周烽坪-简历-单页.pdf dist/周烽坪-简历-单页.pdf
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
